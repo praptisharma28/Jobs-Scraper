@@ -14,7 +14,7 @@
 - [Contributing](#contributing)
 - [License](#license)
 - [Contributors](#contributors)
-## Introduction
+## Introduction 
 
 The Jobs Scraper is a powerful Go application designed for scraping job postings from a variety of websites and storing them in an SQLite database. Additionally, it offers endpoints for retrieving and synchronizing job postings, making it a valuable tool for job seekers and developers alike.
 
@@ -31,7 +31,7 @@ Before getting started with the Jobs Scraper, please ensure you have the followi
 
 
 
-## How to setup
+## How to setup the project
 
 To run the application, you have to create a `.env` file. To configure you can set environment variables in the file. For example:
 
