@@ -31,7 +31,7 @@ Before getting started with the Jobs Scraper, please ensure you have the followi
 
 
 
-## How to setup
+## How to setup project
 
 To run the application, you have to create a `.env` file. To configure you can set environment variables in the file. For example:
 
