@@ -1,6 +1,9 @@
-name:  Greetings
+name: Greetings
 
-on: [pull_request_target, issues]
+on:
+  pull_request_target:
+  issues:
+    types: [opened]
 
 jobs:
   greeting:
@@ -18,16 +21,16 @@ jobs:
             # Label issues based on keywords in title or body
             # For example, label "bug" if "bug" is found in the issue
             # Add more conditions as needed
-            if [[ ${{ github.event.issue.title }} == *"bug"* ]]; then
+            if [[ "${{ github.event.issue.title }}" == *"bug"* ]]; then
               echo "Adding label: bug"
-              gh issue add-label ${{ github.event.issue.number }} bug
+              gh issue add-label "${{ github.event.issue.number }}" bug
             fi
           elif [ "${{ github.event_name }}" == "pull_request_target" ]; then
             # Label pull requests based on keywords in title or body
             # Add more conditions as needed
-            if [[ ${{ github.event.pull_request.title }} == *"feature"* ]]; then
+            if [[ "${{ github.event.pull_request.title }}" == *"feature"* ]]; then
               echo "Adding label: feature"
-              gh pr add-label ${{ github.event.pull_request.number }} feature
+              gh pr add-label "${{ github.event.pull_request.number }}" feature
             fi
           fi
         env:
